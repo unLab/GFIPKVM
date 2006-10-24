@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<style type="text/css">
+		body
+		{
+			margin:0px;
+			padding:0px;
+			background-color:#333333;
+			color:#FFF;
+			font-family:Arial;
+		}
+
+		#canvasContainer
+		{
+			border:5px #666666 solid;
+		}
+		
+		#status
+		{
+			font-family:Courier NEW;
+			font-size:11px;
+		}
+		</style>
+		<script type='text/javascript' src='http://code.jquery.com/jquery-1.5.2.js'></script>
+		<script type="text/javascript" src="socketController.js"></script>
+	</head>
+	<body>
+
+		<table cellspacing="0" cellpadding="0" align="center" width="100%">
+			<tr>
+				<td align="center" valign="top">
+					<!-- Controls -->
+					<b><u>Control Panel</u></b>
+					<p>
+						<b>Send Protected Combo</b><br />
+						<input type="button" value="Ctrl+Alt+Delete" id="ctrlaltdel" /><br />
+						<input type="button" value="Alt+F4" id="altf4" /><br />
+						<input type="button" value="Ctrl+W" id="ctrlw" /><br />
+						<input type="button" value="Caps Lock" id="capslock" />
+					</p>
+					<p>
+						<b>Switch KVM</b><br />
+                        <input type="button" value="Switch" id="switch" /><br />
+						<input type="button" value="Computer 1" id="comp1" /><br />
+						<input type="button" value="Computer 2" id="comp2" /><br />
+						<input type="button" value="Computer 3" id="comp3" /><br />
+						<input type="button" value="Computer 4" id="comp4" />
+					</p>
+					<p>
+						<b>Wake-ON-Lan</b><br />
+						<input type="button" value="Computer 1" id="wolcomp1" /><br />
+						<input type="button" value="Computer 2" id="wolcomp2" /><br />
+						<input type="button" value="Computer 3" id="wolcomp3" /><br />
+						<input type="button" value="Computer 4" id="wolcomp4" />
+					</p>
+                    <p>
+                    	<input type="button" value="Reset" id="9999" />
+                    </p>
+					<span id="status">Connecting...</span>
+				</td>
+				<td width="800" height="600" id="canvasContainer">
+					<!-- Canvas -->
+					<img src="desktop.png" width="800" height="600" id="canvas" />
+				</td>
+				<td align="center" valign="top">
+					<!-- Debugging -->
+					<b><u>Debugging</u></b>
+					<br /><br />
+					<div id="current"></div>
+					<input type="text" id="outputStream" value="" />
+					<br /><Br /><Br /><Br />----debug-----<Br /><br /><div id="debug" style="height:300px;overflow:auto;font-family:Courier New;font-size:11px;"></div>
+				</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>
