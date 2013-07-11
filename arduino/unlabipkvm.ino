@@ -74,9 +74,9 @@ void loop()
     // Read the newest character off the software serial.
     serialIn = softSerial.read();
     
-    // A new byte has been read let's process it
+    // A new byte has been read let's process it.
     if (serialIn)
-    {. 
+    { 
       // This character is a "-", and because our divTracker is = 0, this must be the start of a HID report.
       if (serialIn == '-' && divTracker == 0)
       { 
